@@ -5,13 +5,14 @@ import pathlib
 
 input_txt = pathlib.Path(__file__).parent / "input.txt"
 
-def reduce_lists(accumulator: tuple[list, list], numbers: str):
+def reduce_lists(accumulator: tuple[list, list], numbers: list[str]):
     """Reduce a list of strings containing space-separated numbers
     into a tuple containing two lists.
 
     For example:
 
-    ["11111   22222", "33333   44444"] -> ([11111, 33333], [22222, 44444])
+    ["11111", "22222"] -> ([11111], [22222])
+    ["33333", "44444"] -> ([11111, 33333], [22222, 44444])
 
     Args:
         accumulator (tuple[list, list]): Accumulator for number strings
