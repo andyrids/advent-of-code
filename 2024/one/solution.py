@@ -37,4 +37,12 @@ def subtract(items: tuple[int]) -> int:
 
     return abs(operator.sub(*items))
 
-result = sum(map(subtract, zip(*map(sorted, input_lists))))
+
+def similarity_score(left: list[int], right: list[int]):
+    pass
+
+sorted_lists = tuple(map(sorted, input_lists))
+result = sum(map(subtract, zip(*sorted_lists)))
+
+(left, right) = sorted_lists
+similarity_score = sum([number * right.count(number)  for number in left])
