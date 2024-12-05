@@ -55,6 +55,7 @@ def report_filter(report: list[int], dampener: bool = False) -> bool:
             # recursive check of temp report
             if report_filter(temp_report):
                 return True
+        return False
         
     increasing = sorted(report, reverse=False)
     decreasing = sorted(report, reverse=True)
