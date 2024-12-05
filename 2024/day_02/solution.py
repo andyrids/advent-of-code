@@ -39,6 +39,7 @@ def report_filter(report: list[int], dampener: bool = False) -> bool:
 
     Args:
         report (list[int]): List of integers representing levels.
+        dampener (bool): Tolerate single 'bad' level flag.
 
     Returns:
         True if a report levels meet the requirements else False.
