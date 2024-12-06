@@ -3,8 +3,6 @@ import operator
 import pathlib
 import re
 
-import time
-
 
 def reduce_memory(accumulator: list, memory: list[str]):
     """Reduce memory commands.
@@ -19,7 +17,6 @@ def reduce_memory(accumulator: list, memory: list[str]):
 
     accumulator.append("".join(memory))
     return accumulator
-
 
 
 def mul(x: int, y: int) -> int:
