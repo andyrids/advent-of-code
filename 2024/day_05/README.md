@@ -92,3 +92,5 @@ For each of the incorrectly-ordered updates, use the page ordering rules to put 
 After taking only the incorrectly-ordered updates and ordering them correctly, their middle page numbers are 47, 29, and 47. Adding these together produces 123.
 
 Find the updates which are not in the correct order. What do you get if you add up the middle page numbers after correctly ordering just those updates?
+
+**Your puzzle answer was 4480.**
