@@ -52,7 +52,6 @@ for right_diagonal in range(rows + columns - 1):
 # 1654 (low) | 1766 (low) | 2613
 print(search_count)
 
-
 cross_count = 0
 for row in range(1, len(word_search)-1):
     for column in range(1, len(word_search[0])-1):
@@ -78,4 +77,7 @@ for row in range(1, len(word_search)-1):
                 diagonal_right in ("MAS", "SAM")
             ):
                 cross_count += 1
+
+
+# 1905
 print(cross_count)
