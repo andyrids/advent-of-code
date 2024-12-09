@@ -1,7 +1,6 @@
 import functools
 import operator
 import pathlib
-import re
 
 
 def get_count(text: str) -> int:
