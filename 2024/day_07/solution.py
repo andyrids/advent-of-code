@@ -21,8 +21,10 @@ def solve_equation(numbers: list[int], target):
         for i in range(len(operators)):
             if operators[i] == "+":
                 result += numbers[i+1]
-            else:  # multiplication
+            elif operators[i] == "*":
                 result *= numbers[i+1]
+            else:
+                result = int(f"{result}{numbers[i+1]}")
         return result
     
 
@@ -31,7 +33,7 @@ def solve_equation(numbers: list[int], target):
     operator_count = len(numbers) - 1
     
     # Try all combinations of '+' and '*'
-    for operators in itertools.product(['+', '*'], repeat=operator_count):
+    for operators in itertools.product(['+', '*', "||"], repeat=operator_count):
         if evaluate(numbers, operators) == target:
             return True
     
@@ -62,4 +64,7 @@ def total_calibration_result(equations: list[str]):
 
 # 229926 (low) | 133867379 (low) | 7133867379 (low) 
 # 2299996598920 (high) | 2299996598890
+print(total_calibration_result(input_txt.read_text().splitlines()))
+
+# 362646859298554 (with "||" added to solve_equation)
 print(total_calibration_result(input_txt.read_text().splitlines()))
