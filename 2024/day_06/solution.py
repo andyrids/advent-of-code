@@ -85,3 +85,5 @@ while True:
 
 # list[list[str]] -> str -> count("X") = positions in patrol
 print("".join(["".join(row) for row in patrol_map]).count("X"))
+
+print("\n".join(["".join(row) for row in patrol_map]))
