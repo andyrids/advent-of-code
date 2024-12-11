@@ -8,15 +8,17 @@ You ask how long it'll take; the engineers tell you that it only needs final cal
 
 For example:
 
-190: 10 19
-3267: 81 40 27
-83: 17 5
-156: 15 6
-7290: 6 8 6 15
-161011: 16 10 13
-192: 17 8 14
-21037: 9 7 18 13
-292: 11 6 16 20
+    ```txt
+    190: 10 19
+    3267: 81 40 27
+    83: 17 5
+    156: 15 6
+    7290: 6 8 6 15
+    161011: 16 10 13
+    192: 17 8 14
+    21037: 9 7 18 13
+    292: 11 6 16 20
+    ```
 
 Each line represents a single equation. The test value appears before the colon on each line; it is your job to determine whether the remaining numbers can be combined with operators to produce the test value.
 
@@ -24,9 +26,11 @@ Operators are always evaluated left-to-right, not according to precedence rules.
 
 Only three of the above equations can be made true by inserting operators:
 
+    ```txt
     190: 10 19 has only one position that accepts an operator: between 10 and 19. Choosing + would give 29, but choosing * would give the test value (10 * 19 = 190).
     3267: 81 40 27 has two positions for operators. Of the four possible configurations of the operators, two cause the right side to match the test value: 81 + 40 * 27 and 81 * 40 + 27 both equal 3267 (when evaluated left-to-right)!
     292: 11 6 16 20 can be solved in exactly one way: 11 + 6 * 16 + 20.
+    ```
 
 The engineers just need the total calibration result, which is the sum of the test values from just the equations that could possibly be true. In the above example, the sum of the test values for the three equations listed above is 3749.
 
@@ -50,3 +54,5 @@ Now, apart from the three equations that could be made true using only addition 
 Adding up all six test values (the three that could be made before using only + and * plus the new three that can now be made by also using ||) produces the new total calibration result of 11387.
 
 Using your new knowledge of elephant hiding spots, determine which equations could possibly be true. What is their total calibration result?
+
+**Your puzzle answer was 362646859298554.**
